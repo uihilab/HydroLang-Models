@@ -1,0 +1,3 @@
+Purpose: Disaggregates 1-hour rainfall data into 15-minute interval. 
+Details: Model trained with 15 minute rainfall data for the duration of 48 hours.
+Other Info: ...
