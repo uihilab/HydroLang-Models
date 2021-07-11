@@ -1,6 +1,11 @@
+# Hydrolang Community Resources
+ 
 ## Table of Contents
 * [Introduction](https://github.com/uihilab/HydroLang-Models#Introduction)
 * [Community Resources](https://github.com/uihilab/HydroLang-Models#Community-Resources)
+  * [Models](https://github.com/uihilab/HydroLang-Models#Models)
+  * [Data](https://github.com/uihilab/HydroLang-Models#Data)
+  * [Case Studies](https://github.com/uihilab/HydroLang-Models#Case-Studies)
 * [License](https://github.com/uihilab/HydroLang-Models#License)
 * [Acknowledgements](https://github.com/uihilab/HydroLang-Models#Acknowledgements)
 * [References](#references)
@@ -20,9 +25,22 @@ HydroLang users are encouraged to build and share predictive models suitable for
 * **Snow**
 * **Soil Moisture**
 * **Water Quality**
+* **Other**
 
 ### Data
 HydroLang allows users to retrieve, filter, process, and combine hydrological data from a variety of resources. Under this folder, the users can share their data retrieval scripts for future utilization and reference.
 
 ### Case Studies
 One of the main goals of HydroLang is to simplify hydrological data retrieval, analysis, visualization, modelling, and mapping with readable, concise, and contained code, thanks to its comprehensive and modular design. HydroLang users can share their case study scripts for reproduction, modification, and feedback collection.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/uihilab/HydroLang-Models/blob/master/LICENSE) file for details.
+
+## Acknowledgements
+This project is developed by the University of Iowa Hydroinformatics Lab (UIHI Lab):
+
+https://hydroinformatics.uiowa.edu/.
+
+## References
+
+* Ramirez, C.E., Sermet, Y., Molkenthin, F. and Demir, I., 2021. HydroLang: An Open-Source Web-Based Programming Framework for Hydrological Sciences. https://doi.org/10.31223/X5M31D
