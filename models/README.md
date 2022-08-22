@@ -13,7 +13,9 @@ Using pure client side development environments, we recommend using [VSCode Live
 
 The script tag enables the HydroLang library globaly throughout the window space the HTML file is running on. This means that all the functionalities of HydroLang can be run using the developer console from the web browser as shown in the following example:
 
-![Demo](https://github.com/uihilab/HydroLang-Models/blob/main/data/img/hydroLang_api_demo.gif)
+<p align="center">
+ <img src = "https://github.com/uihilab/HydroLang-Models/blob/main/data/img/hydroLang_api_demo.gif" alt="animated" />
+</p>
 
 From there onwards, the developer can use the library in whichever means they see fit. There are two ways to run HydroLang models: 
 
@@ -30,7 +32,7 @@ const hydro = new HydroLang();
 var retrieveData = hydro.data.retrieve({params: {param1: "someVal", param2: "someVal"}, args:{arg1: "someVal", arg2: "someVal"})
 ```
 
-The HTML file is not 
+Running the script through the HTML file might run the requested function execution as expected since some of the functions run asynchronously (e.g. most functions of the data and maps module). If you want to build a specific application, you can use the functions embedded a sourcee for running code in buttons, tags,UI aiding 
 
 ## Using the BMI compliant version
 
