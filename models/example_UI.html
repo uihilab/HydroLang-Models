@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      type="module"
+      onload="initHydrolang()"
+      src="./hydrolang/hydro.js"
+    ></script>
+    <title>HydroLang Example Page</title>
+  </head>
+  <body>
+    <h2>HydroLang General Example</h2>
+    <button onclick="retrieveDataUSGS()">Retrieve USGS Gauge</button>
+    <button onclick="cleaner()">Clean Data</button>
+    <button onclick="visualize()">Visualize Data</button>
+    <button onclick="Stats()">Basic Stats on Data</button>
+    <button onclick="downloadClean()">Download Clean Data</button>
+    <button onclick="downloadRaw()">Download Raw Data</button>
+    <script>
+      var res, clean;
+      //Scripts needs to be onloaded by the first click of a function
+      function initHydrolang() {
+        //hydrolang instance available as a global variable
+        window.hydro = new Hydrolang();
+      }
+
+      const retrieveDataUSGS = () => {
+        res = window.hydro.data.retrieve({
+          params: {
+            source: "usgs",
+            datatype: "instant-values",
+            proxyurl: "local-proxy",
+          },
+          args: {
+            site: "USGS:05454500",
+            startDt: "2008-04-02",
+            endDt: "2010-06-30",
+            format: "json",
+          },
+        });
+        alert("Your data has been retrieved!");
+        console.log(res);
+      };
+
+      const cleaner = () => {
+        if (res === undefined) {
+          alert("Please press the retrieve button first!");
+          return;
+        }
+        clean = window.hydro.data.transform({
+          params: {
+            save: "value",
+          },
+          args: {
+            type: "ARR",
+            keep: '["datetime", "value"]',
+          },
+          data: res,
+        });
+        alert("If you want to see your data, please run the visualize button!");
+        alert("You can also find it prompted in your console.");
+        console.log(clean);
+      };
+
+      const visualize = () => {
+        if (res === undefined) {
+          alert("Please press the retrieve button or clean button first!");
+          return;
+        }
+        window.hydro.visualize.draw({
+          params: { type: "chart", divID: "USGS_Data" },
+          args: { charttype: "line" },
+          data: clean,
+        });
+      };
+
+      const Stats = () => {
+        if (res === undefined) {
+          alert("Please press the retrieve button or clean button first!");
+          return;
+        }
+        var basic = window.hydro.analyze.stats.basicstats({
+            data: clean
+        })
+        window.hydro.visualize.draw({
+          params: { type: "table", divID: "USGS_Data_Stats" },
+          data: basic,
+        });
+      }
+
+      const downloadClean = () => {
+        if (res === undefined) {
+          alert("Please make sure you retrieved and cleaned the data!");
+          return;
+        }
+        window.hydro.data.download({
+          params: { input: "USGS_Data" },
+          args: { type: "CSV" },
+          data: clean,
+        });
+      };
+
+      //Raw data cannto be changde into a CSV format, only the raw datatype it was retrieved in (JSON)
+      const downloadRaw = () => {
+        if (res === undefined) {
+          alert("Please make sure you retrieved and cleaned the data!");
+          return;
+        }
+        window.hydro.data.download({
+          params: { input: "USGS_Data" },
+          args: { type: "JSON" },
+          data: res,
+        });
+      };
+    </script>
+  </body>
+</html>

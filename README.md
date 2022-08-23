@@ -28,8 +28,9 @@ HydroLang users are encouraged to build and share predictive models suitable for
 * **Other**
 
 Models can be developed in HydroLang through two ways:
-* Using the framework as it is through its API within a JavaScript file.
-* Using the BMI specification steering files for running a model.
+* The native API.
+* BMI specification steering files.
+* HTML driven applications.
 
 Please refer to the [models page](https://github.com/uihilab/HydroLang-Models/tree/main/models) for more information.
 
@@ -46,8 +47,6 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 This project is developed by the University of Iowa Hydroinformatics Lab (UIHI Lab):
 
 https://hydroinformatics.uiowa.edu/.
-
-And with the support of the Cosortium of Universities for the Advancement of Hydrological Science [CUAHSI](https://www.cuahsi.org/) through the [Hydroinformatics Innovation Fellowship](https://www.cuahsi.org/grant-opportunities/hydroinformatics-innovation-fellowship).
 
 And with the support of the Cosortium of Universities for the Advancement of Hydrological Science [CUAHSI](https://www.cuahsi.org/) through the [Hydroinformatics Innovation Fellowship](https://www.cuahsi.org/grant-opportunities/hydroinformatics-innovation-fellowship).
 
