@@ -14,7 +14,7 @@ Using pure client side development environments, we recommend using [VSCode Live
 The script tag enables the HydroLang library globaly throughout the window space the HTML file is running on. This means that all the functionalities of HydroLang can be run using the developer console from the web browser as shown in the following example:
 
 <p align="center">
- <img src = "https://github.com/uihilab/HydroLang-Models/blob/main/data/img/hydroLang_api_demo.gif" alt="animated" size="60%" />
+ <img src = "https://github.com/uihilab/HydroLang-Models/blob/main/data/img/hydroLang_api_demo.gif" alt="animated" width="70%" />
 </p>
 
 From there onwards, the developer can use the library in whichever means they see fit. There are three ways to run HydroLang: 
@@ -33,10 +33,10 @@ const hydro = new HydroLang();
 var retrieveData = hydro.data.retrieve({params: {param1: "someVal", param2: "someVal"}, args:{arg1: "someVal", arg2: "someVal"})
 ```
 
-Running the script through the HTML file might run the requested function execution as expected since some of the functions run asynchronously (e.g. most functions of the data and maps module). If you want to build a specific application, there are many ways in which you can explore HydroLang's functionalities. For example, through the use of the browser's UI you can declare buttons that attach the require functions coorrectly declared into the HTML script.
+Since some of the functions run asynchronously, running the script through the HTML file may cause the desired function execution to not proceed as expected (e.g. most functions of the data and maps module). There are several approaches to explore HydroLang's features if you want to develop a specific application. For instance, you can use the buttons in the browser's user interface to attach the necessary functions correctly declared in the HTML script (example found on this page).
 
 <p align="center">
- <img src = "https://github.com/uihilab/HydroLang-Models/blob/main/data/img/hydroLang_UI_demo.gif" alt="animated" size="60%" />
+ <img src = "https://github.com/uihilab/HydroLang-Models/blob/main/data/img/hydroLang_UI_demo.gif" alt="animated" width="70%" />
 </p>
 
 
@@ -51,9 +51,9 @@ src = "./hydrolang/hydroBMIInstance.js"
 > 
 ```
 
-To run a specific simulation, A JSON type steering file that contains information about the model, functions to be used as well as any further implementation must be declared and called within the script running the HTML file.
+A JSON-type steering file containing details on the model, the methods to be utilized, and any additional implementation must be declared and called within the script running the HTML file in order to execute a particular simulation. The simulations will proceed as planned after the model's global variables are set and the steering file is executed using the API through the console or a specified UI.
 
-An example of a steering file should contain the following:
+A steering file should contain the following:
 
 ```javascript
 {
@@ -73,4 +73,29 @@ An example of a steering file should contain the following:
 }
 ```
 
-The steering file will run a HydroLang instance that needs to be tailored to the user's specific needs. An example of a data retrieval use can be found in [this link](https://github.com/uihilab/HydroLang/tree/master/hydrolang/bmi-implementation/case-study)
+The steering file will run a HydroLang instance that needs to be tailored to the user's specific needs. An example of a data retrieval use can be found in [this link](https://github.com/uihilab/HydroLang/tree/master/hydrolang/bmi-implementation/case-study).
+
+## Using HTML elements
+
+The HydroLang framework is used by HL-ML, an HTML-based interface that makes it simple to do environmental and hydrological analyses.
+It operates according to the web components specification, which enables greater integration between the usage of semantically driven HTML instructions and the use of the native JS environment of the browser to process instructions with little coding.
+
+To use, declare the following in the top of your HTML file:
+
+```html
+<link rel="stylesheet" href="../lib/libraries/hydrolang/external/css/hydrolang.css"/>
+<script type="module" src="../lib/main.js"></script>
+```
+
+In the body of the document, include the following to declare components:
+
+```html
+<body>
+    <div id="hydrolang">
+      <hydrolang-ml>
+        <!--Components go here!-->
+      </hydrolang-ml>
+  </div>
+</body>
+```
+To see more examples and use cases, please visit [this link](https://github.com/uihilab/HydroLang-ML).
