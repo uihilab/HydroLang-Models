@@ -98,4 +98,16 @@ In the body of the document, include the following to declare components:
   </div>
 </body>
 ```
+
+Every function usage can be done using the following structure (the "-here" separation not required): 
+
+```html 
+<hydrolang-ml>
+    <analyze-mod method="someFunctionName">
+        <parameters-here someAtrr="Some Attribute"></parameters-here>
+        <arguments-here somArgs="someArguments"></arguments-here>
+        <dataset-here>[someData1, someData2...]</dataset-here>
+    </analyze-mod>
+</hydrolang-ml>
+```
 To see more examples and use cases, please visit [this link](https://github.com/uihilab/HydroLang-ML).
