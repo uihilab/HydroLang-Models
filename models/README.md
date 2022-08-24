@@ -1,7 +1,7 @@
 # HydroLang-Models
-This space is dedicated for users with an interest of using HydroLang to add workflows / scripts to retrieve / filter hydrological and supporting data here. 
+This space is dedicated for users with an interest of using HydroLang to add workflows / scripts to retrieve / filter hydrological and supporting data here. Using pure client side development environments, we recommend using [VSCode Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the HTML file running HydroLang, but any other developing environment or external server than can run the HTML file can be used.
 
-In both situations, the HTML file containing the aforementioned script at the top must also contain the script necessary to execute the JavaScript commands:
+The HydroLang library must be included in the top of any HTML files using the framework, or in any additional JavaScript files using the functions within:
 
 ```html
 <script
@@ -9,7 +9,10 @@ In both situations, the HTML file containing the aforementioned script at the to
  src= "./hydrolang/hydro.js"
 ></script>
 ```
-Using pure client side development environments, we recommend using [VSCode Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) to serve the HTML file running HydroLang, but any other developing environment or external server than can run the HTML file can be used.
+
+```javascript
+import HydroLang from '../hydro.js'
+```
 
 The script tag enables the HydroLang library globaly throughout the window space the HTML file is running on. This means that all the functionalities of HydroLang can be run using the developer console from the web browser as shown in the following example:
 
