@@ -6,7 +6,7 @@ Users can tailor their case studies in whichever format they see fit. We do reco
 ## What to Include
 Each case study should have a .txt, .md, or any rich text format with minimum the following items:
 * Few lines describing the scope of the research.
-* Published works if available/applicable.
+* Referenced or published papers and manuscripts if available/applicable.
 * Functions used from the framework.
 * Results
 

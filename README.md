@@ -35,7 +35,7 @@ Models can be developed in HydroLang through two ways:
 Please refer to the [models page](https://github.com/uihilab/HydroLang-Models/tree/main/models) for more information.
 
 ### Data
-HydroLang allows users to retrieve, filter, process, and combine hydrological data from a variety of resources. Under this folder, the users can share their data retrieval scripts for future utilization and reference.
+HydroLang allows users to retrieve, filter, process, and combine hydrological data from a variety of resources. Under this folder, the users can share their data retrieval scripts for future utilization and reference. Being data driven and with several options for retrieval, HydroLang data sources contain most variables that can be used for specific analyses. You can find more info in the [following link](https://github.com/uihilab/HydroLang/tree/master/hydrolang/modules/data).
 
 ### Case Studies
 One of the main goals of HydroLang is to simplify hydrological data retrieval, analysis, visualization, modeling, and mapping with readable, concise, and contained code, thanks to its comprehensive and modular design. HydroLang users can share their case study scripts for reproduction, modification, and feedback collection.

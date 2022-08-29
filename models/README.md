@@ -45,7 +45,7 @@ Since some of the functions run asynchronously, running the script through the H
 
 ## Using the BMI compliant version
 
-The [BMI](https://csdms.colorado.edu/wiki/BMI) compliant version of HydroLang allows users to declare models through steering files rather than using the API directly, for HydroLang releases 1.1.x onwards. A thorough explanation on how to declare the functions for a specific use case can be seen in [this example](https://github.com/uihilab/HydroLang/tree/master/hydrolang/bmi-implementation). Running a simulation requires the use of the HydroLang-Compliant class for BMI, declared as:
+The [BMI](https://csdms.colorado.edu/wiki/BMI) compliant version of HydroLang allows users to declare models through steering files rather than using the API directly, for HydroLang releases 1.1.x onwards. A thorough explanation on how to declare the functions for a specific use case can be seen in [this LINK](https://github.com/uihilab/HydroLang/tree/master/hydrolang/bmi-implementation). Running a simulation requires the use of the HydroLang-Compliant class for BMI, declared as:
 
 ```html
 <script
